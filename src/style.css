@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    width: 400px;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    color: #fff;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #444;
+    background: #222;
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+input[type="text"]::placeholder {
+    color: #777;
+}
+
+button[type="submit"] {
+    padding: 12px 20px;
+    border: 1px solid #444;
+    background: #333;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #444;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: #2a2a2a;
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: inline-block;
+    position: relative;
+}
+
+li.completed .checkbox {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+li.completed .checkbox::after {
+    content: '✔';
+    color: #111;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+}
+
+li label {
+    flex-grow: 1;
+}
+
+li.completed label {
+    text-decoration: line-through;
+    color: #888;
+}
